@@ -1,1629 +1,1824 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdelghafour Moumad - Futur Ingénieur Smart Industry</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Abdelghafour Moumad | Smart Industry, Robotics & AI Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Abdelghafour Moumad, Smart Industry master's student specializing in robotics, industrial automation, AIoT, digital twins, ROS2, embedded systems, and intelligent manufacturing.">
+    <meta name="keywords" content="Abdelghafour Moumad, Smart Industry, Robotics, IoT, AI, AIoT, ROS2, Unity 3D, Digital Twin, Embedded Systems, Industrial Automation, Morocco Engineer">
+    <meta name="author" content="Abdelghafour Moumad">
+    <meta name="theme-color" content="#081120">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Abdelghafour Moumad | Smart Industry, Robotics & AI Engineer">
+    <meta property="og:description" content="Engineering portfolio focused on industrial digitalization, robotics, embedded systems, AIoT, and R&D innovation.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkzQ1RltgWQO75wJ4LStYI0GQkLNKcqA6YUg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <style>
+        :root {
+            --bg: #07111f;
+            --bg-soft: #0e1c30;
+            --surface: rgba(16, 31, 52, 0.76);
+            --surface-strong: #12243b;
+            --card: #f5f8fc;
+            --card-alt: #edf3f8;
+            --text: #ecf5ff;
+            --text-dark: #102033;
+            --muted: #90a4bf;
+            --muted-dark: #5a6c84;
+            --line: rgba(137, 169, 205, 0.18);
+            --accent: #34d6c9;
+            --accent-strong: #0eb4aa;
+            --accent-alt: #ffb84d;
+            --shadow: 0 30px 80px rgba(3, 9, 18, 0.28);
+            --radius-lg: 28px;
+            --radius-md: 20px;
+            --radius-sm: 14px;
+            --container: 1180px;
+        }
+
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: "Manrope", sans-serif;
+            color: var(--text-dark);
+            background:
+                radial-gradient(circle at top left, rgba(52, 214, 201, 0.18), transparent 28%),
+                radial-gradient(circle at top right, rgba(255, 184, 77, 0.14), transparent 24%),
+                linear-gradient(180deg, #07111f 0%, #0a1526 22%, #edf3f8 22%, #edf3f8 100%);
             overflow-x: hidden;
         }
 
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 2rem;
-            transition: all 0.3s ease;
+        body.nav-open {
+            overflow: hidden;
         }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button,
+        input,
+        textarea {
+            font: inherit;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 16px;
+            z-index: 1200;
+            background: #ffffff;
+            color: var(--text-dark);
+            padding: 0.7rem 1rem;
+            border-radius: 999px;
+            transition: top 0.2s ease;
+        }
+
+        .skip-link:focus {
+            top: 16px;
+        }
+
+        .container {
+            width: min(calc(100% - 2rem), var(--container));
             margin: 0 auto;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #3b82f6;
+        .section {
+            padding: 5.5rem 0;
         }
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.45rem 0.85rem;
+            border: 1px solid rgba(52, 214, 201, 0.18);
+            border-radius: 999px;
+            background: rgba(52, 214, 201, 0.08);
+            color: var(--accent);
+            font-size: 0.86rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
 
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
+        .section-head {
+            display: grid;
+            gap: 1rem;
+            margin-bottom: 2.75rem;
         }
 
-        .nav-menu a:hover {
-            color: #3b82f6;
+        .section-head h2 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(2rem, 4vw, 3.15rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+            color: var(--text-dark);
         }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        .section-head p {
+            max-width: 760px;
+            color: var(--muted-dark);
+            font-size: 1.05rem;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(20px);
+            background: rgba(7, 17, 31, 0.72);
+            border-bottom: 1px solid rgba(144, 164, 191, 0.12);
+        }
+
+        .nav-shell {
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            justify-content: space-between;
+            min-height: 78px;
+            gap: 1rem;
+        }
+
+        .brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.95rem;
+            font-weight: 800;
+            color: var(--text);
+        }
+
+        .brand-mark {
+            width: 42px;
+            height: 42px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            font-family: "Space Grotesk", sans-serif;
+            background:
+                linear-gradient(145deg, rgba(52, 214, 201, 0.92), rgba(14, 180, 170, 0.82));
+            color: #06131b;
+            box-shadow: 0 16px 38px rgba(52, 214, 201, 0.28);
+        }
+
+        .brand-copy span {
+            display: block;
+        }
+
+        .brand-copy span:first-child {
+            font-size: 0.96rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .brand-copy span:last-child {
+            font-size: 0.8rem;
+            color: var(--muted);
+            font-weight: 600;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(236, 245, 255, 0.86);
+            font-weight: 600;
+            font-size: 0.96rem;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a:focus-visible,
+        .nav-links a.active {
+            color: var(--accent);
+        }
+
+        .nav-toggle {
+            display: none;
+            width: 48px;
+            height: 48px;
+            border: 1px solid rgba(144, 164, 191, 0.16);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            color: var(--text);
+        }
+
+        .hero {
             position: relative;
-            overflow: hidden;
+            isolation: isolate;
+            padding: 4rem 0 5.5rem;
+            color: var(--text);
         }
 
         .hero::before {
-            content: '';
+            content: "";
             position: absolute;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23334155" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            animation: float 20s ease-in-out infinite;
-            opacity: 0.1;
+            inset: 0;
+            background:
+                linear-gradient(rgba(137, 169, 205, 0.08) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(137, 169, 205, 0.08) 1px, transparent 1px);
+            background-size: 46px 46px;
+            mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.86) 0%, transparent 100%);
+            z-index: -2;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(1deg); }
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: auto auto 0 -8%;
+            width: 340px;
+            height: 340px;
+            background: radial-gradient(circle, rgba(52, 214, 201, 0.24) 0%, rgba(52, 214, 201, 0) 70%);
+            filter: blur(10px);
+            z-index: -1;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .hero-copy {
+            display: grid;
+            gap: 1.4rem;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeInUp 1s ease-out;
+            font-family: "Space Grotesk", sans-serif;
+            font-size: clamp(3rem, 7vw, 5.6rem);
+            line-height: 0.94;
+            letter-spacing: -0.06em;
+            max-width: 10ch;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
+        .hero h1 span {
+            display: block;
+            color: var(--accent);
         }
 
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s ease;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Section générale */
-        .section {
-            padding: 80px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1e293b;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about {
-            background: #f8fafc;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .profile-image {
-            width: 100%;
-            max-width: 400px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 15px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            margin-bottom: 2rem;
-        }
-
-        .profile-image:hover {
-            transform: scale(1.05);
-        }
-
-        .professional-highlight {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 1rem;
-            border-radius: 10px;
-            margin: 1rem 0;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .about-text {
+        .hero-intro {
+            max-width: 700px;
+            color: rgba(236, 245, 255, 0.84);
             font-size: 1.1rem;
-            line-height: 1.8;
-            color: #475569;
         }
 
-        .contact-info {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-        }
-
-        .contact-item i {
-            color: #3b82f6;
-            margin-right: 1rem;
-            width: 20px;
-        }
-
-        /* Compétences */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: translateY(-10px);
-        }
-
-        .skill-category h3 {
-            color: #3b82f6;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .skill-tags {
+        .hero-highlights {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.75rem;
         }
 
-        .skill-tag {
-            background: linear-gradient(45deg, #e0f2fe, #f3e5f5);
-            color: #374151;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
+        .hero-highlights span,
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.75rem 1rem;
+            border-radius: 999px;
+            border: 1px solid rgba(144, 164, 191, 0.16);
+            background: rgba(255, 255, 255, 0.04);
+            color: rgba(236, 245, 255, 0.9);
+            font-size: 0.94rem;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.9rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            min-height: 54px;
+            padding: 0 1.3rem;
+            border: 1px solid transparent;
+            border-radius: 18px;
+            font-weight: 800;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover,
+        .btn:focus-visible {
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+            color: #041018;
+            box-shadow: 0 18px 46px rgba(52, 214, 201, 0.28);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.04);
+            color: var(--text);
+            border-color: rgba(144, 164, 191, 0.18);
+        }
+
+        .hero-panel {
+            position: relative;
+            padding: 1.3rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(144, 164, 191, 0.14);
+            background:
+                linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02)),
+                rgba(16, 31, 52, 0.84);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .hero-panel::before {
+            content: "";
+            position: absolute;
+            inset: -30% auto auto -10%;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(52, 214, 201, 0.18) 0%, rgba(52, 214, 201, 0) 70%);
+        }
+
+        .signal-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .signal-card {
+            position: relative;
+            padding: 1.35rem;
+            border-radius: 22px;
+            border: 1px solid rgba(144, 164, 191, 0.14);
+            background: rgba(6, 17, 31, 0.58);
+        }
+
+        .signal-card h2,
+        .signal-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .signal-card p {
+            color: rgba(236, 245, 255, 0.72);
+            font-size: 0.95rem;
+        }
+
+        .signal-card strong {
+            display: block;
+            color: var(--accent-alt);
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 0.45rem;
+        }
+
+        .signal-stats {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.9rem;
+        }
+
+        .signal-pillars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.8rem;
+        }
+
+        .signal-pillars span {
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(52, 214, 201, 0.08);
+            border: 1px solid rgba(52, 214, 201, 0.16);
+            color: rgba(236, 245, 255, 0.92);
+            font-size: 0.83rem;
+            font-weight: 700;
+        }
+
+        .overview-strip {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .overview-card {
+            padding: 1.15rem 1.2rem;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(144, 164, 191, 0.12);
+        }
+
+        .overview-card small {
+            display: block;
+            margin-bottom: 0.4rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.72rem;
+            font-weight: 800;
+        }
+
+        .overview-card strong {
+            display: block;
+            margin-bottom: 0.25rem;
+            font-size: 1.12rem;
+            color: var(--text);
+        }
+
+        .overview-card span {
+            color: rgba(236, 245, 255, 0.74);
             font-size: 0.9rem;
-            border: 1px solid #e5e7eb;
         }
 
-        /* Projets */
+        .panel-card,
+        .timeline-card,
+        .skill-card,
+        .project-card,
+        .experience-card,
+        .contact-card,
+        .leadership-card,
+        .cert-card {
+            border-radius: var(--radius-md);
+            box-shadow: 0 22px 52px rgba(12, 22, 38, 0.08);
+            border: 1px solid rgba(16, 32, 51, 0.08);
+            background: rgba(255, 255, 255, 0.86);
+            backdrop-filter: blur(10px);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(300px, 0.9fr);
+            gap: 1.5rem;
+        }
+
+        .about-copy,
+        .about-matrix {
+            padding: 2rem;
+        }
+
+        .about-copy {
+            display: grid;
+            gap: 1.15rem;
+        }
+
+        .about-copy p {
+            color: var(--muted-dark);
+            font-size: 1.02rem;
+        }
+
+        .about-points {
+            display: grid;
+            gap: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        .about-points li {
+            display: flex;
+            gap: 0.85rem;
+            list-style: none;
+            color: var(--muted-dark);
+        }
+
+        .about-points i {
+            color: var(--accent-strong);
+            margin-top: 0.2rem;
+        }
+
+        .about-matrix {
+            display: grid;
+            gap: 1rem;
+            background:
+                radial-gradient(circle at top right, rgba(52, 214, 201, 0.12), transparent 35%),
+                linear-gradient(160deg, rgba(18, 36, 59, 0.98), rgba(12, 24, 41, 0.95));
+            color: var(--text);
+        }
+
+        .matrix-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .matrix-chip {
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(255, 184, 77, 0.14);
+            color: var(--accent-alt);
+            font-size: 0.82rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .matrix-header h3 {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1.45rem;
+        }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem;
+        }
+
+        .matrix-grid div {
+            padding: 1rem;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(144, 164, 191, 0.12);
+        }
+
+        .matrix-grid small {
+            display: block;
+            color: var(--muted);
+            text-transform: uppercase;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            margin-bottom: 0.35rem;
+            font-weight: 800;
+        }
+
+        .matrix-grid strong {
+            color: var(--text);
+            line-height: 1.35;
+            font-size: 0.98rem;
+        }
+
+        .timeline {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .timeline-card {
+            padding: 1.6rem 1.7rem;
+            display: grid;
+            grid-template-columns: 170px minmax(0, 1fr);
+            gap: 1.25rem;
+        }
+
+        .timeline-card time,
+        .experience-meta time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            color: var(--accent-strong);
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .timeline-card h3,
+        .experience-card h3,
+        .project-card h3,
+        .leadership-card h3,
+        .contact-card h3 {
+            font-family: "Space Grotesk", sans-serif;
+            color: var(--text-dark);
+        }
+
+        .timeline-card p {
+            color: var(--muted-dark);
+            margin-top: 0.35rem;
+        }
+
+        .timeline-card .meta {
+            color: var(--muted-dark);
+            font-weight: 700;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .skill-card {
+            padding: 1.7rem;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .skill-card header {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .skill-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 18px;
+            display: grid;
+            place-items: center;
+            color: var(--accent-strong);
+            background: rgba(52, 214, 201, 0.11);
+        }
+
+        .skill-card p {
+            color: var(--muted-dark);
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+        }
+
+        .tag-list span {
+            padding: 0.58rem 0.82rem;
+            border-radius: 999px;
+            background: var(--card-alt);
+            color: var(--text-dark);
+            font-size: 0.86rem;
+            font-weight: 700;
+        }
+
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.15rem;
         }
 
         .project-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .project-header {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 1.5rem;
-        }
-
-        .project-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-description {
-            color: #475569;
-            line-height: 1.6;
-        }
-
-        /* Formation */
-        .education-timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-
-        .education-timeline::before {
-            content: '';
-            position: absolute;
-            left: 1rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
-        }
-
-        .education-item {
-            position: relative;
-            margin-bottom: 3rem;
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .education-item::before {
-            content: '';
-            position: absolute;
-            left: -3rem;
-            top: 2rem;
-            width: 20px;
-            height: 20px;
-            background: #3b82f6;
-            border-radius: 50%;
-            border: 4px solid white;
-        }
-
-        .education-year {
-            color: #3b82f6;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        .education-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 0.5rem 0;
-            color: #1e293b;
-        }
-
-        .education-school {
-            color: #475569;
-            font-style: italic;
-        }
-
-        /* Activités & Compétitions */
-        .activity-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .activity-category:hover {
-            transform: translateY(-5px);
-        }
-
-        .activity-category-title {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            color: #1e293b;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
-        }
-
-        .activity-category-title i {
-            color: #3b82f6;
-            margin-right: 0.5rem;
-        }
-
-        .edit-btn,
-        .add-section-btn {
-            display: none; /* Masqué par défaut pour le déploiement */
-        }
-
-        .edit-btn {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: transform 0.2s ease;
-        }
-
-        .edit-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Mode édition */
-        .edit-mode .edit-btn,
-        .edit-mode .add-section-btn {
-            display: block;
-        }
-
-        .edit-mode .edit-btn {
-            display: flex;
-            align-items: center;
-        }
-
-        /* Bouton pour activer le mode édition */
-        .admin-toggle {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: linear-gradient(45deg, #dc2626, #7c2d12);
-            color: white;
-            border: none;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
-            transition: all 0.3s ease;
-            z-index: 1500;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .admin-toggle:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
-        }
-
-        .admin-toggle.active {
-            background: linear-gradient(45deg, #16a34a, #166534);
-        }
-
-        /* Notification mode édition */
-        .edit-notification {
-            position: fixed;
-            top: 80px;
-            right: 20px;
-            background: linear-gradient(45deg, #16a34a, #166534);
-            color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3);
-            z-index: 1500;
-            display: none;
-            animation: slideInRight 0.5s ease-out;
-        }
-
-        .edit-notification.show {
-            display: block;
-        }
-
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        .activity-item {
-            background: #f8fafc;
-            padding: 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            border-left: 4px solid #3b82f6;
-        }
-
-        .activity-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .activity-header h4 {
-            color: #1e293b;
-            font-size: 1.2rem;
-            margin: 0;
-        }
-
-        .activity-period {
-            color: #3b82f6;
-            font-weight: 600;
-            background: rgba(59, 130, 246, 0.1);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-
-        .activity-description ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .activity-description li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: #475569;
-        }
-
-        .activity-description li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
-            font-size: 0.8rem;
-        }
-
-        /* Compétitions Grid */
-        .competitions-grid {
+            padding: 1.7rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 1rem;
         }
 
-        .competition-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+        .project-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
         }
 
-        .competition-card:hover {
-            border-color: #3b82f6;
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.2);
+        .project-type {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.42rem 0.78rem;
+            border-radius: 999px;
+            background: rgba(255, 184, 77, 0.14);
+            color: #b16b00;
+            font-size: 0.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
         }
 
-        .competition-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .project-card p {
+            color: var(--muted-dark);
         }
 
-        .competition-card h4 {
-            color: #1e293b;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+        .experience-grid,
+        .leadership-grid,
+        .cert-grid,
+        .contact-grid {
+            display: grid;
+            gap: 1rem;
         }
 
-        .competition-name {
-            color: #3b82f6;
-            font-weight: 600;
-            margin-bottom: 0.3rem;
+        .experience-card,
+        .leadership-card,
+        .contact-card {
+            padding: 1.8rem;
         }
 
-        .competition-location {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+        .experience-card {
+            display: grid;
+            gap: 1rem;
         }
 
-        .competition-tags {
+        .experience-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.3rem;
-            justify-content: center;
+            justify-content: space-between;
+            gap: 0.75rem;
         }
 
-        .tag {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 15px;
-            font-size: 0.75rem;
-            font-weight: 500;
+        .experience-meta p {
+            color: var(--muted-dark);
+            font-weight: 700;
         }
 
-        /* Certifications */
-        .certifications-grid {
+        .bullet-list {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .bullet-list li {
+            list-style: none;
+            position: relative;
+            padding-left: 1.2rem;
+            color: var(--muted-dark);
+        }
+
+        .bullet-list li::before {
+            content: "";
+            position: absolute;
+            top: 0.65rem;
+            left: 0;
+            width: 0.46rem;
+            height: 0.46rem;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .leadership-grid {
+            grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+        }
+
+        .competition-list {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .competition-item {
+            padding: 1rem 1.1rem;
+            border-radius: 18px;
+            background: var(--card-alt);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.85rem;
+        }
+
+        .competition-item i {
+            color: #c47900;
+            margin-top: 0.15rem;
+        }
+
+        .competition-item strong {
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .competition-item span {
+            color: var(--muted-dark);
+            font-size: 0.95rem;
+        }
+
+        .cert-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .cert-card {
+            padding: 1.45rem;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .cert-card i {
+            color: var(--accent-strong);
+            font-size: 1.25rem;
+        }
+
+        .cert-card p {
+            color: var(--muted-dark);
+        }
+
+        .contact-grid {
+            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.88fr);
+        }
+
+        .contact-card {
             display: grid;
             gap: 1rem;
         }
 
-        .cert-item {
+        .contact-links {
             display: flex;
+            flex-wrap: wrap;
+            gap: 0.85rem;
+        }
+
+        .contact-link {
+            display: inline-flex;
             align-items: center;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #10b981;
+            gap: 0.65rem;
+            padding: 0.9rem 1rem;
+            border-radius: 18px;
+            background: var(--card-alt);
+            font-weight: 800;
+            color: var(--text-dark);
         }
 
-        .cert-item i {
-            color: #10b981;
-            font-size: 1.5rem;
-            margin-right: 1rem;
+        .contact-stack {
+            display: grid;
+            gap: 0.9rem;
         }
 
-        .cert-item h4 {
-            margin: 0 0 0.3rem 0;
-            color: #1e293b;
-        }
-
-        .cert-item p {
-            margin: 0;
-            color: #64748b;
-            font-size: 0.9rem;
-        }
-
-        /* Bouton d'ajout */
-        .add-section-btn {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .add-section-btn button {
-            background: linear-gradient(45deg, #10b981, #3b82f6);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .add-section-btn button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
-        }
-
-        /* Modal pour édition */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 5% auto;
-            padding: 2rem;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-            position: relative;
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            position: absolute;
-            right: 1rem;
-            top: 1rem;
-        }
-
-        .close:hover {
-            color: #000;
-        }
-
-        .form-group {
-            margin-bottom: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #1e293b;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: 2px solid #e5e7eb;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #3b82f6;
-        }
-
-        .save-btn {
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-right: 1rem;
-        }
-
-        .cancel-btn {
-            background: #64748b;
-            color: white;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-        }
-
-        .social-links {
+        .contact-stack div {
             display: flex;
-            justify-content: center;
+            gap: 0.85rem;
+            align-items: flex-start;
+            color: var(--muted-dark);
+        }
+
+        .contact-stack i {
+            color: var(--accent-strong);
+            margin-top: 0.2rem;
+        }
+
+        .site-footer {
+            padding: 2rem 0 3rem;
+            color: #d2deea;
+            background: #07111f;
+            border-top: 1px solid rgba(144, 164, 191, 0.12);
+        }
+
+        .footer-shell {
+            display: flex;
+            justify-content: space-between;
             gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-link {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
-            color: white;
-            border-radius: 50%;
-            display: flex;
             align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: transform 0.3s ease;
         }
 
-        .social-link:hover {
-            transform: translateY(-5px);
+        .footer-shell p:last-child {
+            color: var(--muted);
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-menu {
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid rgba(52, 214, 201, 0.28);
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-grid,
+            .about-grid,
+            .contact-grid,
+            .leadership-grid,
+            .skills-grid,
+            .projects-grid,
+            .cert-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-strip {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .timeline-card {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 820px) {
+            .nav-toggle {
+                display: inline-grid;
+                place-items: center;
+            }
+
+            .nav-links {
+                position: fixed;
+                inset: 78px 1rem auto 1rem;
+                padding: 1rem;
+                border-radius: 24px;
+                border: 1px solid rgba(144, 164, 191, 0.12);
+                background: rgba(10, 21, 38, 0.98);
+                box-shadow: var(--shadow);
                 display: none;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hero {
+                padding-top: 3rem;
+            }
+
+            .signal-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            body {
+                background:
+                    radial-gradient(circle at top left, rgba(52, 214, 201, 0.16), transparent 26%),
+                    linear-gradient(180deg, #07111f 0%, #0a1526 18%, #edf3f8 18%, #edf3f8 100%);
+            }
+
+            .container {
+                width: min(calc(100% - 1.25rem), var(--container));
+            }
+
+            .section {
+                padding: 4.5rem 0;
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: clamp(2.55rem, 14vw, 4rem);
             }
 
-            .about-content {
+            .hero-actions,
+            .contact-links {
+                flex-direction: column;
+            }
+
+            .btn,
+            .contact-link {
+                width: 100%;
+            }
+
+            .overview-strip,
+            .matrix-grid {
                 grid-template-columns: 1fr;
-                gap: 2rem;
             }
 
-            .skills-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .about-copy,
+            .about-matrix,
+            .project-card,
+            .skill-card,
+            .experience-card,
+            .leadership-card,
+            .contact-card,
+            .cert-card,
+            .timeline-card {
+                padding: 1.4rem;
             }
 
-            .education-timeline {
-                padding-left: 1rem;
-            }
-
-            .education-timeline::before {
-                left: 0;
-            }
-
-            .education-item::before {
-                left: -1rem;
+            .footer-shell {
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
 
-        /* Animations au scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            *,
+            *::before,
+            *::after {
+                animation: none !important;
+                transition: none !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">AM</div>
-            <ul class="nav-menu">
-                <li><a href="#home">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#education">Formation</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#activities">Activités</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Abdelghafour Moumad</h1>
-            <p>Futur Ingénieur Smart Industry | Expert en Automatisation, Robotique & IA</p>
-            <p>Passionné par la transformation digitale de l'industrie via l'IA, l'IoT et les technologies de l'Industrie 4.0</p>
-            <a href="#about" class="cta-button">Découvrir mon profil</a>
-        </div>
-    </section>
+    <header class="site-header">
+        <div class="container nav-shell">
+            <a class="brand" href="#top" aria-label="Go to top of portfolio">
+                <span class="brand-mark">AM</span>
+                <span class="brand-copy">
+                    <span>Abdelghafour Moumad</span>
+                    <span>Smart Industry Engineer Portfolio</span>
+                </span>
+            </a>
 
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <h2 class="section-title fade-in">À Propos</h2>
-        <div class="about-content fade-in">
-            <div class="contact-info">
-                <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAGQAKADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAK
-    </section>
-
-    <!-- Formation Section -->
-    <section id="education" class="section">
-        <h2 class="section-title fade-in">Formation</h2>
-        <div class="education-timeline fade-in">
-            <div class="education-item">
-                <div class="education-year">Octobre 2024 - En cours</div>
-                <div class="education-title">Master Smart Industry</div>
-                <div class="education-school">Université Sidi Mohamed Ben Abdellah - Faculté des Sciences Dhar El Mahraz</div>
-            </div>
-            <div class="education-item">
-                <div class="education-year">Septembre 2021 - Juillet 2024</div>
-                <div class="education-title">Licence Fondamentale en Physique - Parcours Électronique</div>
-                <div class="education-school">Université Hassan 2 - Faculté des Sciences Ben M'sik</div>
-            </div>
-            <div class="education-item">
-                <div class="education-year">2020 - 2021</div>
-                <div class="education-title">Baccalauréat Sciences Expérimentales</div>
-                <div class="education-school">Option Physique et Chimie</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <h2 class="section-title fade-in">Compétences</h2>
-        <div class="skills-grid">
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-cog"></i> Automatisation & Maintenance</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Arduino</span>
-                    <span class="skill-tag">ESP32</span>
-                    <span class="skill-tag">Raspberry Pi</span>
-                    <span class="skill-tag">STM32</span>
-                    <span class="skill-tag">Siemens PLC</span>
-                    <span class="skill-tag">Codesys</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-code"></i> Développement Web & Backend</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">React.js</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">XML/YAML</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-cube"></i> Modélisation & Simulation 3D</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Fusion 360</span>
-                    <span class="skill-tag">SolidWorks</span>
-                    <span class="skill-tag">Unity 3D</span>
-                    <span class="skill-tag">Blender</span>
-                    <span class="skill-tag">Digital Twins</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-robot"></i> Robotique & Systèmes Embarqués</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">ROS2</span>
-                    <span class="skill-tag">IoT</span>
-                    <span class="skill-tag">LoRa</span>
-                    <span class="skill-tag">MicroC</span>
-                    <span class="skill-tag">Assembleur</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-brain"></i> IA & Data Science</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Deep Learning</span>
-                    <span class="skill-tag">OpenCV</span>
-                    <span class="skill-tag">TensorFlow</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">MATLAB</span>
-                    <span class="skill-tag">Prompt Engineering</span>
-                </div>
-            </div>
-            <div class="skill-category fade-in">
-                <h3><i class="fas fa-users"></i> Compétences Comportementales</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Leadership</span>
-                    <span class="skill-tag">Gestion d'équipe</span>
-                    <span class="skill-tag">Gestion de projet agile</span>
-                    <span class="skill-tag">Résolution de problèmes</span>
-                    <span class="skill-tag">Innovation</span>
-                    <span class="skill-tag">Esprit critique</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section about">
-        <h2 class="section-title fade-in">Projets R&D</h2>
-        <div class="projects-grid">
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Drone Quadricoptère Intelligent</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Conception d'un drone autonome basé sur GPS (Raspberry Pi, LoRa, ESP32, PID) pour la navigation par points avec haute précision.</p>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Canne Intelligente pour Malvoyants</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Développement d'une canne assistée (RPi, GPS, ultrasons, caméra, TTS) capable de guider les utilisateurs et de décrire l'environnement urbain.</p>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Robot Autonome Collecteur de Déchets</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Création d'un rover équipé d'IA (RPi + caméra + bras robotique) pour détecter et ramasser les déchets sur le sol.</p>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Balayeuse Autonome Nocturne - SmartSweep</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Conception d'une balayeuse robotisée équipée de capteurs LiDAR, caméras infrarouges, ultrasons et modules GPS, capable d'errer de manière autonome pendant la nuit pour nettoyer les rues sans gêner la circulation.</p>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Kiosque Intelligent de Collecte d'Humidité</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Proposition et développement d'un kiosque autonome capable de capter l'humidité de l'air ambiant, de la condenser en eau potable grâce à un système de déshumidification.</p>
-                </div>
-            </div>
-            <div class="project-card fade-in">
-                <div class="project-header">
-                    <div class="project-title">Panneau Solaire Intelligent à 2 Axes</div>
-                </div>
-                <div class="project-content">
-                    <p class="project-description">Réalisation d'un système de suivi solaire automatique utilisant des capteurs LDR et des servomoteurs pour ajuster l'orientation du panneau sur deux axes (azimut et élévation).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Activités & Compétitions Section -->
-    <section id="activities" class="section">
-        <h2 class="section-title fade-in">Activités & Compétitions</h2>
-        
-        <!-- Section Leadership -->
-        <div class="activity-category fade-in">
-            <h3 class="activity-category-title">
-                <i class="fas fa-users"></i> Leadership & Gestion d'Équipe
-                <button class="edit-btn" onclick="editSection('leadership')">
-                    <i class="fas fa-edit"></i>
-                </button>
-            </h3>
-            <div id="leadership-content">
-                <div class="activity-item">
-                    <div class="activity-header">
-                        <h4>Chef de Projet - Club Robotique FSDM (Fès)</h4>
-                        <span class="activity-period">2023 - 2024</span>
-                    </div>
-                    <div class="activity-description">
-                        <p><strong>Coordination et Développement d'Activités Techniques :</strong></p>
-                        <ul>
-                            <li>Pilotage simultané de plusieurs initiatives techniques et événementielles</li>
-                            <li>Coordination transversale entre équipes spécialisées (technique, communication, logistique)</li>
-                            <li>Planification et suivi des jalons de projets avec gestion efficace des ressources</li>
-                        </ul>
-                        <p><strong>Organisation d'événements majeurs :</strong></p>
-                        <ul>
-                            <li><strong>Journées PFE :</strong> Coordination complète des Projets de Fin d'Études, accompagnement des étudiants</li>
-                            <li><strong>Festival du Patrimoine Scientifique :</strong> Gestion A à Z de la participation du club</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Compétitions -->
-        <div class="activity-category fade-in">
-            <h3 class="activity-category-title">
-                <i class="fas fa-trophy"></i> Compétitions Nationales de Robotique
-                <button class="edit-btn" onclick="editSection('competitions')">
-                    <i class="fas fa-edit"></i>
-                </button>
-            </h3>
-            <div id="competitions-content">
-                <div class="competitions-grid">
-                    <div class="competition-card">
-                        <div class="competition-icon">🏆</div>
-                        <h4>NRC 2024</h4>
-                        <p class="competition-name">National Robotic Competition</p>
-                        <p class="competition-location">UM6P - Benguerir</p>
-                        <div class="competition-tags">
-                            <span class="tag">Robot à 4 pattes</span>
-                            <span class="tag">Navigation labyrinthe</span>
-                            <span class="tag">Mission sauvetage</span>
-                        </div>
-                    </div>
-                    <div class="competition-card">
-                        <div class="competition-icon">🌍</div>
-                        <h4>ARB 2024</h4>
-                        <p class="competition-name">African Robotic Brains</p>
-                        <p class="competition-location">ENSAM - Meknès</p>
-                        <div class="competition-tags">
-                            <span class="tag">Robotique Africaine</span>
-                            <span class="tag">Innovation</span>
-                            <span class="tag">Compétition continentale</span>
-                        </div>
-                    </div>
-                    <div class="competition-card">
-                        <div class="competition-icon">🎯</div>
-                        <h4>NURC 2024</h4>
-                        <p class="competition-name">National University Robotics Challenge</p>
-                        <p class="competition-location">UPF - Fès</p>
-                        <div class="competition-tags">
-                            <span class="tag">Défi universitaire</span>
-                            <span class="tag">Robotique avancée</span>
-                            <span class="tag">Innovation technique</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section Certifications -->
-        <div class="activity-category fade-in">
-            <h3 class="activity-category-title">
-                <i class="fas fa-certificate"></i> Certifications & Formations
-                <button class="edit-btn" onclick="editSection('certifications')">
-                    <i class="fas fa-edit"></i>
-                </button>
-            </h3>
-            <div id="certifications-content">
-                <div class="certifications-grid">
-                    <div class="cert-item">
-                        <i class="fas fa-medal"></i>
-                        <div>
-                            <h4>Python for Data Science, AI & Development</h4>
-                            <p>Coursera - 2024</p>
-                        </div>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-medal"></i>
-                        <div>
-                            <h4>Supervised Machine Learning: Regression and Classification</h4>
-                            <p>Coursera - 2024</p>
-                        </div>
-                    </div>
-                    <div class="cert-item">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h4>Enactus</h4>
-                            <p>FSDM - Programme Entrepreneuriat Social</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Bouton d'ajout -->
-        <div class="add-section-btn fade-in">
-            <button onclick="addNewActivity()">
-                <i class="fas fa-plus"></i> Ajouter une nouvelle activité
+            <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-nav">
+                <i class="fa-solid fa-bars"></i>
             </button>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-        <div class="social-links">
-            <a href="mailto:abdelghafourmoumad@gmail.com" class="social-link">
-                <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://linkedin.com/in/abdelghafour-moumad-b30217228" target="_blank" class="social-link">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="tel:0671103883" class="social-link">
-                <i class="fas fa-phone"></i>
-            </a>
+            <nav aria-label="Primary navigation">
+                <ul class="nav-links" id="site-nav">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#leadership">Leadership</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <p>&copy; 2024 Abdelghafour Moumad. Tous droits réservés.</p>
-        <p>Futur Ingénieur Smart Industry - Robotique & IA</p>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="top">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-copy reveal">
+                        <span class="eyebrow"><i class="fa-solid fa-microchip"></i> Smart Industry | Robotics | AIoT</span>
+                        <h1>Designing the next <span>intelligent factory systems.</span></h1>
+                        <p class="hero-intro">
+                            Smart Industry master's student with hands-on experience in industrial automation, robotics, IoT, embedded systems, AI-driven decision support, and digital twin environments. I build engineering solutions that connect machines, data, and autonomy.
+                        </p>
+
+                        <div class="hero-highlights" aria-label="Key expertise">
+                            <span><i class="fa-solid fa-robot"></i> ROS2 & autonomous robots</span>
+                            <span><i class="fa-solid fa-network-wired"></i> Industrial IoT & OPC-UA</span>
+                            <span><i class="fa-solid fa-cubes"></i> Unity 3D & digital twins</span>
+                            <span><i class="fa-solid fa-microchip"></i> Embedded systems & PLCs</span>
+                        </div>
+
+                        <div class="hero-actions">
+                            <a class="btn btn-primary" href="CV%20(4)_3.pdf" download>
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                Download CV
+                            </a>
+                            <a class="btn btn-secondary" href="#projects">
+                                <i class="fa-solid fa-diagram-project"></i>
+                                Explore Projects
+                            </a>
+                            <a class="btn btn-secondary" href="https://www.linkedin.com/in/abdelghafour-moumad-b30217228" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                        </div>
+
+                        <div class="overview-strip" aria-label="Profile summary">
+                            <article class="overview-card">
+                                <small>Current Focus</small>
+                                <strong>Industry 4.0</strong>
+                                <span>Automation, AIoT, smart manufacturing, digitalization</span>
+                            </article>
+                            <article class="overview-card">
+                                <small>Academic Track</small>
+                                <strong>Master's in Smart Industry</strong>
+                                <span>University Sidi Mohamed Ben Abdellah, Fes</span>
+                            </article>
+                            <article class="overview-card">
+                                <small>Applied R&amp;D</small>
+                                <strong>8+ engineering projects</strong>
+                                <span>Robotics, energy systems, assistive tech, autonomy</span>
+                            </article>
+                            <article class="overview-card">
+                                <small>Leadership</small>
+                                <strong>Robotics Club Project Manager</strong>
+                                <span>Team coordination, competitions, technical events</span>
+                            </article>
+                        </div>
+                    </div>
+
+                    <aside class="hero-panel reveal" aria-label="Engineering profile snapshot">
+                        <div class="signal-grid">
+                            <section class="signal-card">
+                                <h2>Engineering Orientation</h2>
+                                <p>
+                                    Bridging industrial operations with robotics, embedded intelligence, data analytics, and immersive simulation to improve efficiency, traceability, and autonomy.
+                                </p>
+                                <div class="signal-pillars">
+                                    <span>Automation</span>
+                                    <span>AI</span>
+                                    <span>IoT</span>
+                                    <span>Digital Twins</span>
+                                </div>
+                            </section>
+
+                            <div class="signal-stats">
+                                <section class="signal-card">
+                                    <strong>02</strong>
+                                    <h3>Internships</h3>
+                                    <p>Industrial maintenance and robotics engineering</p>
+                                </section>
+                                <section class="signal-card">
+                                    <strong>03</strong>
+                                    <h3>Competitions</h3>
+                                    <p>NRC, NURC, and ARB national robotics challenges</p>
+                                </section>
+                                <section class="signal-card">
+                                    <strong>24h</strong>
+                                    <h3>Rapid Build</h3>
+                                    <p>Quadruped robot developed for a rescue mission challenge</p>
+                                </section>
+                            </div>
+
+                            <section class="signal-card">
+                                <h3>Core technology stack</h3>
+                                <div class="tag-list">
+                                    <span>ROS2 Humble</span>
+                                    <span>Nav2</span>
+                                    <span>SLAM</span>
+                                    <span>Siemens PLC</span>
+                                    <span>ESP32</span>
+                                    <span>Raspberry Pi</span>
+                                    <span>Unity 3D</span>
+                                    <span>Docker</span>
+                                    <span>TensorRT</span>
+                                    <span>Power BI</span>
+                                </div>
+                            </section>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-user-gear"></i> About Me</span>
+                    <h2>Engineering mindset grounded in intelligent manufacturing.</h2>
+                    <p>
+                        I am building a career at the intersection of robotics, industrial automation, AI, and connected systems. My objective is to modernize manufacturing environments through practical engineering, multidisciplinary collaboration, and technology that creates measurable industrial value.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <article class="panel-card about-copy reveal">
+                        <p>
+                            My background combines electronics, embedded systems, industrial maintenance, and applied robotics. I am especially motivated by projects that require both software and hardware thinking: sensing, communication, autonomy, supervision, simulation, and system integration.
+                        </p>
+                        <p>
+                            Through internships, competitions, and club leadership, I have worked on logistics robots, PLC-based automation, autonomous rovers, intelligent assistive devices, and renewable energy prototypes. I enjoy turning ambitious ideas into structured engineering deliverables.
+                        </p>
+                        <ul class="about-points">
+                            <li><i class="fa-solid fa-circle-check"></i><span>Focused on Smart Industry, industrial digitalization, AIoT, and data-driven operational improvement.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Comfortable across robotics software, embedded platforms, industrial protocols, simulation tools, and low-level programming.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Recognized for leadership, teamwork, autonomy, critical thinking, and fast adaptation to new technologies.</span></li>
+                        </ul>
+                    </article>
+
+                    <aside class="about-matrix reveal" aria-label="Professional profile facts">
+                        <div class="matrix-header">
+                            <div>
+                                <span class="matrix-chip">Profile Matrix</span>
+                                <h3>Applied engineering profile</h3>
+                            </div>
+                            <span class="tech-badge"><i class="fa-solid fa-location-dot"></i> Morocco</span>
+                        </div>
+                        <div class="matrix-grid">
+                            <div>
+                                <small>Primary Domains</small>
+                                <strong>Robotics, industrial automation, AIoT, embedded systems</strong>
+                            </div>
+                            <div>
+                                <small>Simulation</small>
+                                <strong>Unity 3D, Fusion 360, SolidWorks, Blender, CATIA V5</strong>
+                            </div>
+                            <div>
+                                <small>Industrial Stack</small>
+                                <strong>Siemens PLC, TIA Portal, Codesys, Profibus, SCADA, MES tools</strong>
+                            </div>
+                            <div>
+                                <small>Languages</small>
+                                <strong>Arabic, French, English, Amazigh</strong>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="education">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Education</span>
+                    <h2>Academic foundation in Smart Industry and electronics.</h2>
+                    <p>
+                        My studies combine industrial systems, digital transformation, embedded electronics, and intelligent automation, providing a strong basis for Industry 4.0 engineering work.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <article class="timeline-card reveal">
+                        <div>
+                            <time datetime="2024-10">Oct 2024 - Present</time>
+                        </div>
+                        <div>
+                            <h3>Master's Degree in Smart Industry</h3>
+                            <p class="meta">Faculty of Sciences Dhar El Mahraz, Sidi Mohamed Ben Abdellah University, Fes</p>
+                            <p>Advanced studies focused on smart manufacturing, industrial digitalization, connected systems, robotics, and data-enhanced industrial decision-making.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card reveal">
+                        <div>
+                            <time datetime="2021-09">Sep 2021 - Jul 2024</time>
+                        </div>
+                        <div>
+                            <h3>Bachelor's Degree in Physics - Electronics Track</h3>
+                            <p class="meta">Faculty of Sciences Ben M'Sik, Hassan 2 University, Casablanca</p>
+                            <p>Developed strong fundamentals in electronics, measurement, embedded systems, scientific reasoning, and technical problem-solving.</p>
+                        </div>
+                    </article>
+
+                    <article class="timeline-card reveal">
+                        <div>
+                            <time datetime="2020">2020 - 2021</time>
+                        </div>
+                        <div>
+                            <h3>High School Diploma in Experimental Sciences</h3>
+                            <p class="meta">Physics &amp; Chemistry option</p>
+                            <p>Built the scientific base that led to my engineering orientation in automation, robotics, and intelligent systems.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-screwdriver-wrench"></i> Technical Skills</span>
+                    <h2>A multidisciplinary stack for advanced industrial systems.</h2>
+                    <p>
+                        I work across the full engineering chain, from sensors and controllers to robotics middleware, simulation environments, and industrial analytics platforms.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div>
+                                <h3>Embedded Systems & Hardware</h3>
+                                <p>Edge devices, control logic, prototyping, and low-level integration.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>Arduino</span>
+                            <span>ESP32</span>
+                            <span>Raspberry Pi</span>
+                            <span>STM32</span>
+                            <span>FPGA</span>
+                            <span>NVIDIA Jetson Nano</span>
+                            <span>MicroC</span>
+                            <span>Assembly</span>
+                            <span>EasyEDA</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-industry"></i></div>
+                            <div>
+                                <h3>Automation & Industrial Systems</h3>
+                                <p>Control, supervision, communication, and industrial integration.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>Siemens PLC</span>
+                            <span>TIA Portal</span>
+                            <span>LAD</span>
+                            <span>STL</span>
+                            <span>Codesys</span>
+                            <span>WinCC</span>
+                            <span>Ignition</span>
+                            <span>Profibus</span>
+                            <span>Modbus</span>
+                            <span>OPC-UA</span>
+                            <span>MQTT</span>
+                            <span>CAN Bus</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-robot"></i></div>
+                            <div>
+                                <h3>Robotics & Autonomous Navigation</h3>
+                                <p>Middleware, simulation, motion planning, and intelligent mobility.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>ROS2 Humble</span>
+                            <span>SLAM</span>
+                            <span>Nav2</span>
+                            <span>MoveIt</span>
+                            <span>Gazebo</span>
+                            <span>RViz2</span>
+                            <span>CoppeliaSim</span>
+                            <span>Cosimir</span>
+                            <span>MELFA BASIC IV &amp; V</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+                            <div>
+                                <h3>AI, Data & Smart Manufacturing</h3>
+                                <p>Analytics, optimization, predictive maintenance, and AIoT.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>MATLAB / Simulink</span>
+                            <span>Pandas</span>
+                            <span>NumPy</span>
+                            <span>Power BI</span>
+                            <span>Grafana</span>
+                            <span>TensorRT</span>
+                            <span>ONNX Runtime</span>
+                            <span>Edge Impulse</span>
+                            <span>Predictive Maintenance</span>
+                            <span>Time Series Modeling</span>
+                            <span>AIoT</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-cubes"></i></div>
+                            <div>
+                                <h3>3D Modeling, Simulation & Digital Twins</h3>
+                                <p>Virtual prototyping, immersive environments, and digital engineering.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>Fusion 360</span>
+                            <span>SolidWorks</span>
+                            <span>CATIA V5</span>
+                            <span>Unity 3D</span>
+                            <span>Unity XR</span>
+                            <span>Blender</span>
+                            <span>Digital Twins</span>
+                            <span>Factory I/O</span>
+                            <span>FlexSim</span>
+                        </div>
+                    </article>
+
+                    <article class="skill-card reveal">
+                        <header>
+                            <div class="skill-icon"><i class="fa-solid fa-cloud"></i></div>
+                            <div>
+                                <h3>Software, Cloud & Collaboration</h3>
+                                <p>Deployment, IoT platforms, and collaborative engineering workflows.</p>
+                            </div>
+                        </header>
+                        <div class="tag-list">
+                            <span>Docker</span>
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>GitLab</span>
+                            <span>MindSphere</span>
+                            <span>ThingWorx</span>
+                            <span>Azure IoT Hub</span>
+                            <span>Blockchain</span>
+                            <span>Hyperledger</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Engineering &amp; R&amp;D Projects</span>
+                    <h2>Projects that connect autonomy, sensing, control, and industrial relevance.</h2>
+                    <p>
+                        These projects reflect my interest in real-world engineering challenges: mobility, accessibility, logistics, renewable energy, environmental systems, and smart public infrastructure.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-boxes-stacked"></i> Ongoing Robotics</span>
+                        </div>
+                        <h3>Logistics Robot for Stock Management</h3>
+                        <p>
+                            Developed a software-first logistics robot concept for inventory handling and autonomous movement in warehouse-like environments, with focus on navigation, mapping, and system integration.
+                        </p>
+                        <div class="tag-list">
+                            <span>ROS2 Humble</span>
+                            <span>SLAM</span>
+                            <span>Nav2</span>
+                            <span>System Integration</span>
+                            <span>Autonomous Navigation</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-helicopter"></i> Autonomous System</span>
+                        </div>
+                        <h3>Intelligent Quadcopter Drone</h3>
+                        <p>
+                            Built an autonomous drone architecture for GPS-based waypoint navigation using distributed embedded control and long-range communication.
+                        </p>
+                        <div class="tag-list">
+                            <span>Raspberry Pi</span>
+                            <span>ESP32</span>
+                            <span>LoRa</span>
+                            <span>GPS</span>
+                            <span>PID Control</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-person-cane"></i> Assistive Tech</span>
+                        </div>
+                        <h3>Smart Cane for the Visually Impaired</h3>
+                        <p>
+                            Designed an intelligent assistive cane to improve urban mobility through obstacle detection, localization, and audio interaction.
+                        </p>
+                        <div class="tag-list">
+                            <span>Raspberry Pi</span>
+                            <span>GPS</span>
+                            <span>Ultrasonic Sensors</span>
+                            <span>Camera</span>
+                            <span>TTS</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-paw"></i> Competition Robot</span>
+                        </div>
+                        <h3>Quadruped Robot for Maze Navigation</h3>
+                        <p>
+                            Rapidly developed a 4-legged wooden robot within 24 hours for navigation and rescue-oriented competition scenarios.
+                        </p>
+                        <div class="tag-list">
+                            <span>Rapid Prototyping</span>
+                            <span>Robot Mechanics</span>
+                            <span>Competition Engineering</span>
+                            <span>Team Build</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-recycle"></i> AI Rover</span>
+                        </div>
+                        <h3>Autonomous Waste Collector Robot</h3>
+                        <p>
+                            Created a rover concept able to detect and collect waste using computer vision and a robotic arm for semi-structured environments.
+                        </p>
+                        <div class="tag-list">
+                            <span>Raspberry Pi</span>
+                            <span>Camera</span>
+                            <span>Robotic Arm</span>
+                            <span>AI Vision</span>
+                            <span>Mobile Robotics</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-solar-panel"></i> Smart Energy</span>
+                        </div>
+                        <h3>Dual-Axis Smart Solar Panel</h3>
+                        <p>
+                            Designed an automatic solar tracking mechanism that continuously adjusts panel orientation to maximize energy capture.
+                        </p>
+                        <div class="tag-list">
+                            <span>LDR Sensors</span>
+                            <span>Servo Motors</span>
+                            <span>Embedded Control</span>
+                            <span>Energy Optimization</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-cloud-rain"></i> Sustainable Systems</span>
+                        </div>
+                        <h3>Smart Humidity Collection Kiosk</h3>
+                        <p>
+                            Proposed an autonomous kiosk capable of converting air humidity into potable water through controlled condensation and smart monitoring.
+                        </p>
+                        <div class="tag-list">
+                            <span>Environmental Engineering</span>
+                            <span>Autonomous Kiosk</span>
+                            <span>Water Systems</span>
+                            <span>Sustainability</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-road"></i> Smart City</span>
+                        </div>
+                        <h3>SmartSweep Autonomous Night Street Cleaner</h3>
+                        <p>
+                            Designed an advanced autonomous street-cleaning concept for night operations using sensing, localization, and AI-assisted perception.
+                        </p>
+                        <div class="tag-list">
+                            <span>LiDAR</span>
+                            <span>Infrared Cameras</span>
+                            <span>GPS</span>
+                            <span>AI Perception</span>
+                            <span>Autonomous Mobility</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="internships">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-briefcase"></i> Internship Experience</span>
+                    <h2>Industrial exposure from maintenance systems to robotics integration.</h2>
+                    <p>
+                        My internships strengthened both my operational understanding of industrial systems and my interest in intelligent robotic platforms.
+                    </p>
+                </div>
+
+                <div class="experience-grid">
+                    <article class="experience-card reveal">
+                        <div class="experience-meta">
+                            <div>
+                                <h3>Robotics Engineering Intern</h3>
+                                <p>InnovLab Technology</p>
+                            </div>
+                            <time datetime="2025-07">Jul 2025 - Oct 2025</time>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Contributed to a logistics robot project dedicated to stock management workflows.</li>
+                            <li>Worked with ROS2 Humble, SLAM, and Nav2 for mapping, localization, and autonomous navigation.</li>
+                            <li>Focused on software development and system integration for a platform still in conceptual and integration phases.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span>ROS2 Humble</span>
+                            <span>SLAM</span>
+                            <span>Nav2</span>
+                            <span>Logistics Robotics</span>
+                            <span>Integration</span>
+                        </div>
+                    </article>
+
+                    <article class="experience-card reveal">
+                        <div class="experience-meta">
+                            <div>
+                                <h3>Maintenance Technician Intern</h3>
+                                <p>Selecma Panel</p>
+                            </div>
+                            <time datetime="2024-06">Jun 2024 - Sep 2024</time>
+                        </div>
+                        <ul class="bullet-list">
+                            <li>Worked on industrial automation systems based on Siemens PLC architectures.</li>
+                            <li>Implemented and troubleshot industrial communication through the Profibus protocol.</li>
+                            <li>Participated in maintenance and programming tasks for automated control panels.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span>Siemens PLC</span>
+                            <span>Profibus</span>
+                            <span>Control Panels</span>
+                            <span>Industrial Maintenance</span>
+                            <span>TIA Portal</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="leadership">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Robotics Club &amp; Leadership</span>
+                    <h2>Leading multidisciplinary teams around robotics, events, and technical execution.</h2>
+                    <p>
+                        Beyond technical delivery, I have taken responsibility for planning, coordination, and team management through robotics club activities and national competition participation.
+                    </p>
+                </div>
+
+                <div class="leadership-grid">
+                    <article class="leadership-card reveal">
+                        <h3>Project Manager, Robotics Club FSDM - Fes</h3>
+                        <ul class="bullet-list" style="margin-top: 1rem;">
+                            <li>Managed multiple technical and event-based initiatives simultaneously within the club.</li>
+                            <li>Coordinated cross-functional teams across technical, communication, and logistics areas.</li>
+                            <li>Tracked milestones, allocated resources, and maintained execution discipline across projects.</li>
+                            <li>Led strategic participation in robotics competitions while balancing technical, human, and logistical requirements.</li>
+                            <li>Coordinated major events including Final-Year Project Day and the Scientific Heritage Festival.</li>
+                            <li>Currently involved in organizing innovation and robotics workshops for the student community.</li>
+                        </ul>
+                    </article>
+
+                    <aside class="leadership-card reveal" aria-label="Competitions and recognitions">
+                        <h3>Competitions &amp; Technical Exposure</h3>
+                        <div class="competition-list" style="margin-top: 1rem;">
+                            <div class="competition-item">
+                                <i class="fa-solid fa-trophy"></i>
+                                <div>
+                                    <strong>NRC - National Robotics Competition</strong>
+                                    <span>UM6P, Benguerir | Project manager and rapid robot build participation</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <i class="fa-solid fa-award"></i>
+                                <div>
+                                    <strong>NURC - National University Robotics Challenge</strong>
+                                    <span>UPF, Fes | Strategic club coordination and technical involvement</span>
+                                </div>
+                            </div>
+                            <div class="competition-item">
+                                <i class="fa-solid fa-medal"></i>
+                                <div>
+                                    <strong>ARB - African Robotic Brains</strong>
+                                    <span>ENSAM, Meknes | Advanced robotics competition exposure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="certifications">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-certificate"></i> Certifications</span>
+                    <h2>Continuous learning across AI, robotics, CAD, and product development.</h2>
+                    <p>
+                        I actively reinforce my engineering profile through online training, competition programs, and practical design courses.
+                    </p>
+                </div>
+
+                <div class="cert-grid">
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h3>Python for Data Science, AI &amp; Development</h3>
+                        <p>Coursera</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-brain"></i>
+                        <h3>Supervised Machine Learning: Regression and Classification</h3>
+                        <p>Coursera</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-robot"></i>
+                        <h3>Modern Robotics, Course 1: Foundations of Robot Motion</h3>
+                        <p>Robotics fundamentals and motion concepts</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-cube"></i>
+                        <h3>CATIA V5 Beginner to Advanced</h3>
+                        <p>Automotive and industrial design pathway</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        <h3>SOLIDWORKS Foundations</h3>
+                        <p>Sketching and extrusion workflow fundamentals</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h3>Complete PCB Design: From an Idea to a Product</h3>
+                        <p>Electronics design workflow and implementation</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contact">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Contact</span>
+                    <h2>Open to engineering opportunities, collaboration, and ambitious R&amp;D work.</h2>
+                    <p>
+                        If you are working on industrial innovation, robotics, automation, or intelligent systems, I would be glad to connect and discuss how I can contribute.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <article class="contact-card reveal">
+                        <h3>Let's build smarter systems.</h3>
+                        <p>
+                            Reach out for internships, junior engineering opportunities, project collaboration, or technical discussions around robotics, AIoT, embedded systems, and smart manufacturing.
+                        </p>
+                        <div class="contact-links">
+                            <a class="contact-link" href="mailto:abdelghafourmoumad@gmail.com">
+                                <i class="fa-solid fa-envelope"></i>
+                                Email
+                            </a>
+                            <a class="contact-link" href="https://www.linkedin.com/in/abdelghafour-moumad-b30217228" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-linkedin"></i>
+                                LinkedIn
+                            </a>
+                            <a class="contact-link" href="https://github.com/Armoumad" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
+                            <a class="contact-link" href="CV%20(4)_3.pdf" download>
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                Download CV
+                            </a>
+                        </div>
+                    </article>
+
+                    <aside class="contact-card reveal" aria-label="Contact details">
+                        <h3>Direct Details</h3>
+                        <div class="contact-stack">
+                            <div>
+                                <i class="fa-solid fa-envelope"></i>
+                                <span>abdelghafourmoumad@gmail.com</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+212 671 103 883</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Morocco</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-language"></i>
+                                <span>Arabic, French, English, Amazigh</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-shell">
+            <p>&copy; 2026 Abdelghafour Moumad. All rights reserved.</p>
+            <p>Smart Industry | Robotics | AI | Embedded Systems | Digital Twins</p>
+        </div>
     </footer>
 
-    <!-- Bouton pour activer le mode édition (pour l'admin seulement) -->
-    <button class="admin-toggle" onclick="toggleEditMode()" title="Mode édition (Admin)">
-        <i class="fas fa-cog" id="adminIcon"></i>
-    </button>
-
-    <!-- Notification mode édition -->
-    <div class="edit-notification" id="editNotification">
-        <strong>Mode édition activé</strong><br>
-        Vous pouvez maintenant modifier le contenu
-    </div>
-
-    <!-- Modal pour édition -->
-    <div id="editModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h3 id="modalTitle">Modifier la section</h3>
-            <div id="modalForm">
-                <!-- Le contenu du formulaire sera inséré ici -->
-            </div>
-        </div>
-    </div>
-
     <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector(".nav-links");
+        const navItems = document.querySelectorAll(".nav-links a");
+        const sections = document.querySelectorAll("main section[id]");
+
+        navToggle.addEventListener("click", () => {
+            const isOpen = navMenu.classList.toggle("open");
+            document.body.classList.toggle("nav-open", isOpen);
+            navToggle.setAttribute("aria-expanded", String(isOpen));
+            navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+            navToggle.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        navItems.forEach((link) => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("open");
+                document.body.classList.remove("nav-open");
+                navToggle.setAttribute("aria-expanded", "false");
+                navToggle.setAttribute("aria-label", "Open navigation menu");
+                navToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
             });
         });
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
-        });
-
-        // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.16 });
 
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
+        document.querySelectorAll(".reveal").forEach((element) => {
+            revealObserver.observe(element);
         });
 
-        // Mode édition
-        function toggleEditMode() {
-            isEditMode = !isEditMode;
-            const body = document.body;
-            const notification = document.getElementById('editNotification');
-            const adminIcon = document.getElementById('adminIcon');
-            const adminToggle = document.querySelector('.admin-toggle');
-            
-            if (isEditMode) {
-                body.classList.add('edit-mode');
-                notification.classList.add('show');
-                adminIcon.className = 'fas fa-check';
-                adminToggle.classList.add('active');
-                adminToggle.title = 'Désactiver le mode édition';
-                
-                // Masquer la notification après 3 secondes
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 3000);
-            } else {
-                body.classList.remove('edit-mode');
-                adminIcon.className = 'fas fa-cog';
-                adminToggle.classList.remove('active');
-                adminToggle.title = 'Mode édition (Admin)';
-                notification.classList.remove('show');
-            }
-        }
-
-        // Fonctions pour édition des activités
-        let currentSection = '';
-        let isEditMode = false;
-        let activities = {
-            leadership: [
-                {
-                    title: "Chef de Projet - Club Robotique FSDM (Fès)",
-                    period: "2023 - 2024",
-                    description: "Coordination et développement d'activités techniques avec gestion d'équipes multidisciplinaires.",
-                    details: [
-                        "Pilotage simultané de plusieurs initiatives techniques et événementielles",
-                        "Coordination transversale entre équipes spécialisées",
-                        "Organisation des Journées PFE et Festival du Patrimoine Scientifique"
-                    ]
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
                 }
-            ],
-            competitions: [
-                {
-                    name: "NRC 2024",
-                    fullName: "National Robotic Competition",
-                    location: "UM6P - Benguerir",
-                    icon: "🏆",
-                    tags: ["Robot à 4 pattes", "Navigation labyrinthe", "Mission sauvetage"]
-                },
-                {
-                    name: "ARB 2024",
-                    fullName: "African Robotic Brains",
-                    location: "ENSAM - Meknès",
-                    icon: "🌍",
-                    tags: ["Robotique Africaine", "Innovation", "Compétition continentale"]
-                },
-                {
-                    name: "NURC 2024",
-                    fullName: "National University Robotics Challenge",
-                    location: "UPF - Fès",
-                    icon: "🎯",
-                    tags: ["Défi universitaire", "Robotique avancée", "Innovation technique"]
-                }
-            ],
-            certifications: [
-                {
-                    title: "Python for Data Science, AI & Development",
-                    issuer: "Coursera - 2024",
-                    icon: "fas fa-medal"
-                },
-                {
-                    title: "Supervised Machine Learning: Regression and Classification",
-                    issuer: "Coursera - 2024",
-                    icon: "fas fa-medal"
-                },
-                {
-                    title: "Enactus",
-                    issuer: "FSDM - Programme Entrepreneuriat Social",
-                    icon: "fas fa-users"
-                }
-            ]
-        };
 
-        function editSection(section) {
-            if (!isEditMode) {
-                alert('Veuillez d\'abord activer le mode édition en cliquant sur le bouton en bas à droite.');
-                return;
-            }
-            
-            currentSection = section;
-            const modal = document.getElementById('editModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalForm = document.getElementById('modalForm');
-            
-            let formContent = '';
-            
-            switch(section) {
-                case 'leadership':
-                    modalTitle.textContent = 'Modifier Leadership & Gestion d\'Équipe';
-                    formContent = createLeadershipForm();
-                    break;
-                case 'competitions':
-                    modalTitle.textContent = 'Modifier Compétitions';
-                    formContent = createCompetitionsForm();
-                    break;
-                case 'certifications':
-                    modalTitle.textContent = 'Modifier Certifications';
-                    formContent = createCertificationsForm();
-                    break;
-            }
-            
-            modalForm.innerHTML = formContent;
-            modal.style.display = 'block';
-        }
-
-        function createLeadershipForm() {
-            const item = activities.leadership[0];
-            return `
-                <div class="form-group">
-                    <label>Titre du poste :</label>
-                    <input type="text" id="leadershipTitle" value="${item.title}">
-                </div>
-                <div class="form-group">
-                    <label>Période :</label>
-                    <input type="text" id="leadershipPeriod" value="${item.period}">
-                </div>
-                <div class="form-group">
-                    <label>Description :</label>
-                    <textarea id="leadershipDescription" rows="3">${item.description}</textarea>
-                </div>
-                <div class="form-group">
-                    <label>Détails (un par ligne) :</label>
-                    <textarea id="leadershipDetails" rows="5">${item.details.join('\n')}</textarea>
-                </div>
-                <button class="save-btn" onclick="saveSection()">Sauvegarder</button>
-                <button class="cancel-btn" onclick="closeModal()">Annuler</button>
-            `;
-        }
-
-        function createCompetitionsForm() {
-            let formContent = '<div id="competitionsContainer">';
-            activities.competitions.forEach((comp, index) => {
-                formContent += `
-                    <div class="competition-form-item" style="border: 1px solid #e5e7eb; padding: 1rem; margin-bottom: 1rem; border-radius: 8px;">
-                        <h4>Compétition ${index + 1}</h4>
-                        <div class="form-group">
-                            <label>Nom court :</label>
-                            <input type="text" id="compName${index}" value="${comp.name}">
-                        </div>
-                        <div class="form-group">
-                            <label>Nom complet :</label>
-                            <input type="text" id="compFullName${index}" value="${comp.fullName}">
-                        </div>
-                        <div class="form-group">
-                            <label>Lieu :</label>
-                            <input type="text" id="compLocation${index}" value="${comp.location}">
-                        </div>
-                        <div class="form-group">
-                            <label>Icône :</label>
-                            <input type="text" id="compIcon${index}" value="${comp.icon}">
-                        </div>
-                        <div class="form-group">
-                            <label>Tags (séparés par des virgules) :</label>
-                            <input type="text" id="compTags${index}" value="${comp.tags.join(', ')}">
-                        </div>
-                        <button onclick="removeCompetition(${index})" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-                    </div>
-                `;
-            });
-            formContent += `
-                </div>
-                <button onclick="addCompetition()" style="background: #10b981; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-bottom: 1rem;">Ajouter une compétition</button><br>
-                <button class="save-btn" onclick="saveSection()">Sauvegarder</button>
-                <button class="cancel-btn" onclick="closeModal()">Annuler</button>
-            `;
-            return formContent;
-        }
-
-        function createCertificationsForm() {
-            let formContent = '<div id="certificationsContainer">';
-            activities.certifications.forEach((cert, index) => {
-                formContent += `
-                    <div class="certification-form-item" style="border: 1px solid #e5e7eb; padding: 1rem; margin-bottom: 1rem; border-radius: 8px;">
-                        <h4>Certification ${index + 1}</h4>
-                        <div class="form-group">
-                            <label>Titre :</label>
-                            <input type="text" id="certTitle${index}" value="${cert.title}">
-                        </div>
-                        <div class="form-group">
-                            <label>Émetteur :</label>
-                            <input type="text" id="certIssuer${index}" value="${cert.issuer}">
-                        </div>
-                        <div class="form-group">
-                            <label>Icône (classe CSS) :</label>
-                            <input type="text" id="certIcon${index}" value="${cert.icon}">
-                        </div>
-                        <button onclick="removeCertification(${index})" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-                    </div>
-                `;
-            });
-            formContent += `
-                </div>
-                <button onclick="addCertification()" style="background: #10b981; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer; margin-bottom: 1rem;">Ajouter une certification</button><br>
-                <button class="save-btn" onclick="saveSection()">Sauvegarder</button>
-                <button class="cancel-btn" onclick="closeModal()">Annuler</button>
-            `;
-            return formContent;
-        }
-
-        function saveSection() {
-            switch(currentSection) {
-                case 'leadership':
-                    saveLeadership();
-                    break;
-                case 'competitions':
-                    saveCompetitions();
-                    break;
-                case 'certifications':
-                    saveCertifications();
-                    break;
-            }
-            updateDisplay();
-            closeModal();
-        }
-
-        function saveLeadership() {
-            activities.leadership[0] = {
-                title: document.getElementById('leadershipTitle').value,
-                period: document.getElementById('leadershipPeriod').value,
-                description: document.getElementById('leadershipDescription').value,
-                details: document.getElementById('leadershipDetails').value.split('\n').filter(line => line.trim())
-            };
-        }
-
-        function saveCompetitions() {
-            const competitions = [];
-            let index = 0;
-            while(document.getElementById(`compName${index}`)) {
-                competitions.push({
-                    name: document.getElementById(`compName${index}`).value,
-                    fullName: document.getElementById(`compFullName${index}`).value,
-                    location: document.getElementById(`compLocation${index}`).value,
-                    icon: document.getElementById(`compIcon${index}`).value,
-                    tags: document.getElementById(`compTags${index}`).value.split(',').map(tag => tag.trim())
+                navItems.forEach((link) => {
+                    link.classList.toggle("active", link.getAttribute("href") === `#${entry.target.id}`);
                 });
-                index++;
-            }
-            activities.competitions = competitions;
-        }
+            });
+        }, { threshold: 0.45 });
 
-        function saveCertifications() {
-            const certifications = [];
-            let index = 0;
-            while(document.getElementById(`certTitle${index}`)) {
-                certifications.push({
-                    title: document.getElementById(`certTitle${index}`).value,
-                    issuer: document.getElementById(`certIssuer${index}`).value,
-                    icon: document.getElementById(`certIcon${index}`).value
-                });
-                index++;
-            }
-            activities.certifications = certifications;
-        }
-
-        function updateDisplay() {
-            // Mettre à jour l'affichage du leadership
-            const leadershipContent = document.getElementById('leadership-content');
-            const leadership = activities.leadership[0];
-            leadershipContent.innerHTML = `
-                <div class="activity-item">
-                    <div class="activity-header">
-                        <h4>${leadership.title}</h4>
-                        <span class="activity-period">${leadership.period}</span>
-                    </div>
-                    <div class="activity-description">
-                        <p>${leadership.description}</p>
-                        <ul>
-                            ${leadership.details.map(detail => `<li>${detail}</li>`).join('')}
-                        </ul>
-                    </div>
-                </div>
-            `;
-
-            // Mettre à jour l'affichage des compétitions
-            const competitionsContent = document.getElementById('competitions-content');
-            competitionsContent.innerHTML = `
-                <div class="competitions-grid">
-                    ${activities.competitions.map(comp => `
-                        <div class="competition-card">
-                            <div class="competition-icon">${comp.icon}</div>
-                            <h4>${comp.name}</h4>
-                            <p class="competition-name">${comp.fullName}</p>
-                            <p class="competition-location">${comp.location}</p>
-                            <div class="competition-tags">
-                                ${comp.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-
-            // Mettre à jour l'affichage des certifications
-            const certificationsContent = document.getElementById('certifications-content');
-            certificationsContent.innerHTML = `
-                <div class="certifications-grid">
-                    ${activities.certifications.map(cert => `
-                        <div class="cert-item">
-                            <i class="${cert.icon}"></i>
-                            <div>
-                                <h4>${cert.title}</h4>
-                                <p>${cert.issuer}</p>
-                            </div>
-                        </div>
-                    `).join('')}
-                </div>
-            `;
-        }
-
-        function addCompetition() {
-            const container = document.getElementById('competitionsContainer');
-            const index = activities.competitions.length;
-            const newCompetitionForm = `
-                <div class="competition-form-item" style="border: 1px solid #e5e7eb; padding: 1rem; margin-bottom: 1rem; border-radius: 8px;">
-                    <h4>Compétition ${index + 1}</h4>
-                    <div class="form-group">
-                        <label>Nom court :</label>
-                        <input type="text" id="compName${index}" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Nom complet :</label>
-                        <input type="text" id="compFullName${index}" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Lieu :</label>
-                        <input type="text" id="compLocation${index}" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Icône :</label>
-                        <input type="text" id="compIcon${index}" value="🏆">
-                    </div>
-                    <div class="form-group">
-                        <label>Tags (séparés par des virgules) :</label>
-                        <input type="text" id="compTags${index}" value="">
-                    </div>
-                    <button onclick="removeCompetition(${index})" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-                </div>
-            `;
-            container.insertAdjacentHTML('beforeend', newCompetitionForm);
-        }
-
-        function addCertification() {
-            const container = document.getElementById('certificationsContainer');
-            const index = activities.certifications.length;
-            const newCertificationForm = `
-                <div class="certification-form-item" style="border: 1px solid #e5e7eb; padding: 1rem; margin-bottom: 1rem; border-radius: 8px;">
-                    <h4>Certification ${index + 1}</h4>
-                    <div class="form-group">
-                        <label>Titre :</label>
-                        <input type="text" id="certTitle${index}" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Émetteur :</label>
-                        <input type="text" id="certIssuer${index}" value="">
-                    </div>
-                    <div class="form-group">
-                        <label>Icône (classe CSS) :</label>
-                        <input type="text" id="certIcon${index}" value="fas fa-medal">
-                    </div>
-                    <button onclick="removeCertification(${index})" style="background: #ef4444; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Supprimer</button>
-                </div>
-            `;
-            container.insertAdjacentHTML('beforeend', newCertificationForm);
-        }
-
-        function removeCompetition(index) {
-            const element = document.querySelector(`#compName${index}`).closest('.competition-form-item');
-            element.remove();
-        }
-
-        function removeCertification(index) {
-            const element = document.querySelector(`#certTitle${index}`).closest('.certification-form-item');
-            element.remove();
-        }
-
-        function addNewActivity() {
-            if (!isEditMode) {
-                alert('Veuillez d\'abord activer le mode édition en cliquant sur le bouton en bas à droite.');
-                return;
-            }
-            
-            const newActivityType = prompt('Quel type d\'activité voulez-vous ajouter ?\n1. Leadership\n2. Compétition\n3. Certification\n\nTapez 1, 2 ou 3:');
-            
-            switch(newActivityType) {
-                case '1':
-                    editSection('leadership');
-                    break;
-                case '2':
-                    editSection('competitions');
-                    break;
-                case '3':
-                    editSection('certifications');
-                    break;
-                default:
-                    alert('Choix invalide. Veuillez choisir 1, 2 ou 3.');
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('editModal').style.display = 'none';
-        }
-
-        // Fermer le modal en cliquant à l'extérieur
-        window.onclick = function(event) {
-            const modal = document.getElementById('editModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
+        sections.forEach((section) => {
+            sectionObserver.observe(section);
+        });
     </script>
 </body>
 </html>

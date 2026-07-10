@@ -694,6 +694,31 @@
             color: var(--muted-dark);
         }
 
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.15rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.8rem 0.95rem;
+            border-radius: 16px;
+            background: var(--card-alt);
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            font-weight: 800;
+        }
+
+        .project-link:hover,
+        .project-link:focus-visible {
+            background: rgba(52, 214, 201, 0.12);
+            color: #0b3b46;
+        }
+
         .experience-grid,
         .leadership-grid,
         .cert-grid,
@@ -1041,7 +1066,7 @@
                         <span class="eyebrow"><i class="fa-solid fa-microchip"></i> Smart Industry | Robotics | AIoT</span>
                         <h1>Designing the next <span>intelligent factory systems.</span></h1>
                         <p class="hero-intro">
-                            Smart Industry master's student with hands-on experience in industrial automation, robotics, IoT, embedded systems, AI-driven decision support, and digital twin environments. I build engineering solutions that connect machines, data, and autonomy.
+                            Master's student in Smart Industry, project and media manager at FSDM Robotics Club, and internship candidate focused on digitalization, robotics, IoT, and intelligent industrial systems. I build engineering solutions that connect machines, data, and autonomy.
                         </p>
 
                         <div class="hero-highlights" aria-label="Key expertise">
@@ -1064,13 +1089,17 @@
                                 <i class="fa-brands fa-linkedin"></i>
                                 LinkedIn
                             </a>
+                            <a class="btn btn-secondary" href="https://github.com/Armoumad" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                GitHub
+                            </a>
                         </div>
 
                         <div class="overview-strip" aria-label="Profile summary">
                             <article class="overview-card">
                                 <small>Current Focus</small>
-                                <strong>Industry 4.0</strong>
-                                <span>Automation, AIoT, smart manufacturing, digitalization</span>
+                                <strong>6-month internship search</strong>
+                                <span>Digitalization, management, IoT, robotics, and Industry 4.0 delivery</span>
                             </article>
                             <article class="overview-card">
                                 <small>Academic Track</small>
@@ -1078,14 +1107,14 @@
                                 <span>University Sidi Mohamed Ben Abdellah, Fes</span>
                             </article>
                             <article class="overview-card">
-                                <small>Applied R&amp;D</small>
-                                <strong>8+ engineering projects</strong>
-                                <span>Robotics, energy systems, assistive tech, autonomy</span>
+                                <small>GitHub Footprint</small>
+                                <strong>16 public repositories</strong>
+                                <span>ROS, LoRaWAN, dashboards, embedded systems, computer vision</span>
                             </article>
                             <article class="overview-card">
                                 <small>Leadership</small>
-                                <strong>Robotics Club Project Manager</strong>
-                                <span>Team coordination, competitions, technical events</span>
+                                <strong>Project &amp; Media Manager</strong>
+                                <span>Robotics Club leadership, event execution, technical communication</span>
                             </article>
                         </div>
                     </div>
@@ -1112,14 +1141,14 @@
                                     <p>Industrial maintenance and robotics engineering</p>
                                 </section>
                                 <section class="signal-card">
+                                    <strong>16</strong>
+                                    <h3>Public Repos</h3>
+                                    <p>GitHub projects across ROS, IoT, web dashboards, and embedded systems</p>
+                                </section>
+                                <section class="signal-card">
                                     <strong>03</strong>
                                     <h3>Competitions</h3>
                                     <p>NRC, NURC, and ARB national robotics challenges</p>
-                                </section>
-                                <section class="signal-card">
-                                    <strong>24h</strong>
-                                    <h3>Rapid Build</h3>
-                                    <p>Quadruped robot developed for a rescue mission challenge</p>
                                 </section>
                             </div>
 
@@ -1160,12 +1189,12 @@
                             My background combines electronics, embedded systems, industrial maintenance, and applied robotics. I am especially motivated by projects that require both software and hardware thinking: sensing, communication, autonomy, supervision, simulation, and system integration.
                         </p>
                         <p>
-                            Through internships, competitions, and club leadership, I have worked on logistics robots, PLC-based automation, autonomous rovers, intelligent assistive devices, and renewable energy prototypes. I enjoy turning ambitious ideas into structured engineering deliverables.
+                            Through internships, competitions, club leadership, and GitHub publishing, I have worked on logistics robots, PLC-based automation, LoRaWAN monitoring systems, autonomous rovers, assistive devices, and robotics simulation. I enjoy turning ambitious ideas into structured engineering deliverables that are visible, testable, and shareable.
                         </p>
                         <ul class="about-points">
                             <li><i class="fa-solid fa-circle-check"></i><span>Focused on Smart Industry, industrial digitalization, AIoT, and data-driven operational improvement.</span></li>
                             <li><i class="fa-solid fa-circle-check"></i><span>Comfortable across robotics software, embedded platforms, industrial protocols, simulation tools, and low-level programming.</span></li>
-                            <li><i class="fa-solid fa-circle-check"></i><span>Recognized for leadership, teamwork, autonomy, critical thinking, and fast adaptation to new technologies.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i><span>Maintains a GitHub portfolio spanning ROS simulation, LoRaWAN telemetry, computer vision, and engineering web platforms.</span></li>
                         </ul>
                     </article>
 
@@ -1397,54 +1426,184 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow"><i class="fa-solid fa-diagram-project"></i> Engineering &amp; R&amp;D Projects</span>
-                    <h2>Projects that connect autonomy, sensing, control, and industrial relevance.</h2>
+                    <h2>Selected builds from LinkedIn experience and GitHub repositories.</h2>
                     <p>
-                        These projects reflect my interest in real-world engineering challenges: mobility, accessibility, logistics, renewable energy, environmental systems, and smart public infrastructure.
+                        This selection combines current GitHub repositories with projects reflected in my LinkedIn profile, showing work across robotics, industrial simulation, agricultural IoT, embedded systems, and technical web delivery.
                     </p>
                 </div>
 
                 <div class="projects-grid">
                     <article class="project-card reveal">
                         <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-boxes-stacked"></i> Ongoing Robotics</span>
+                            <span class="project-type"><i class="fa-solid fa-robot"></i> Robotics Simulation</span>
+                        </div>
+                        <h3>Ned2 Robot Manipulator with ROS Noetic Simulation and Control</h3>
+                        <p>
+                            End-to-end robotics coursework repository covering RViz planning, Gazebo simulation, MATLAB-based kinematics, and a vision-based pick-and-place workflow for the Niryo Ned2 manipulator.
+                        </p>
+                        <div class="tag-list">
+                            <span>ROS Noetic</span>
+                            <span>Gazebo</span>
+                            <span>RViz</span>
+                            <span>MoveIt</span>
+                            <span>MATLAB</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Ned2-Robot-Manipulator-ROS-Noetic-Simulation-and-Control" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-seedling"></i> Digital Twin &amp; IoT</span>
+                        </div>
+                        <h3>Station Agricole Pro</h3>
+                        <p>
+                            Real-time agricultural supervision platform connected to LoRaWAN field nodes through ChirpStack and MQTT, built as the visualization layer of an intelligent irrigation digital twin project.
+                        </p>
+                        <div class="tag-list">
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MQTT</span>
+                            <span>ChirpStack</span>
+                            <span>Socket.IO</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Station-Agricole-Pro" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-boxes-stacked"></i> Logistics Robotics</span>
                         </div>
                         <h3>Logistics Robot for Stock Management</h3>
                         <p>
-                            Developed a software-first logistics robot concept for inventory handling and autonomous movement in warehouse-like environments, with focus on navigation, mapping, and system integration.
+                            Robotics internship work centered on stock-management automation, mapping, and autonomous movement. This track aligns with my LinkedIn experience and the public Robot Logistique Stock repository.
                         </p>
                         <div class="tag-list">
-                            <span>ROS2 Humble</span>
                             <span>SLAM</span>
                             <span>Nav2</span>
+                            <span>Warehouse Automation</span>
                             <span>System Integration</span>
                             <span>Autonomous Navigation</span>
                         </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Robot-Logistique-Stock" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
                     </article>
 
                     <article class="project-card reveal">
                         <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-helicopter"></i> Autonomous System</span>
+                            <span class="project-type"><i class="fa-solid fa-globe"></i> Technical Web Platform</span>
                         </div>
-                        <h3>Intelligent Quadcopter Drone</h3>
+                        <h3>FSDM Robotics Club Website</h3>
                         <p>
-                            Built an autonomous drone architecture for GPS-based waypoint navigation using distributed embedded control and long-range communication.
+                            Club website developed to present projects, workshops, and community activities, reflecting my media and project management role at FSDM Robotics Club.
                         </p>
                         <div class="tag-list">
-                            <span>Raspberry Pi</span>
-                            <span>ESP32</span>
-                            <span>LoRa</span>
-                            <span>GPS</span>
-                            <span>PID Control</span>
+                            <span>JavaScript</span>
+                            <span>Frontend Delivery</span>
+                            <span>Club Communication</span>
+                            <span>Event Visibility</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/club_robotic_fsdm" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                            <a class="project-link" href="https://club-robotic-fsdm.vercel.app" target="_blank" rel="noreferrer">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                Live Website
+                            </a>
                         </div>
                     </article>
 
                     <article class="project-card reveal">
                         <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-person-cane"></i> Assistive Tech</span>
+                            <span class="project-type"><i class="fa-solid fa-camera"></i> Edge Computer Vision</span>
+                        </div>
+                        <h3>Face Detection on Raspberry Pi 5 with Camera Module 3</h3>
+                        <p>
+                            Lightweight face-detection system optimized for Raspberry Pi 5, with both OpenCV and MediaPipe implementations for embedded deployment tradeoffs.
+                        </p>
+                        <div class="tag-list">
+                            <span>Python</span>
+                            <span>Raspberry Pi</span>
+                            <span>Camera</span>
+                            <span>OpenCV</span>
+                            <span>MediaPipe</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Facial-Detection-on-Raspberry-Pi-5-with-Camera-Module-3" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-signal"></i> LoRa Communication</span>
+                        </div>
+                        <h3>Simple LoRa Communication on Heltec ESP32 SX1276</h3>
+                        <p>
+                            Minimal bidirectional LoRa messaging example for Heltec WiFi LoRa 32 boards, reflecting practical embedded communication work behind wider AIoT and monitoring systems.
+                        </p>
+                        <div class="tag-list">
+                            <span>C++</span>
+                            <span>ESP32</span>
+                            <span>LoRa</span>
+                            <span>SX1276</span>
+                            <span>Embedded Communication</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Simple-LoRa-Communication-Heltec-WiFi-LoRa-32-ESP32-SX1276-" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-diagram-project"></i> Applied IoT Training</span>
+                        </div>
+                        <h3>IoT Workshop with ESP32, MQTT, HTTP, ThingSpeak, and Blynk</h3>
+                        <p>
+                            Workshop repository built around connected-device fundamentals, combining ESP32 communication patterns and cloud/dashboard tooling for hands-on IoT learning.
+                        </p>
+                        <div class="tag-list">
+                            <span>ESP32</span>
+                            <span>MQTT</span>
+                            <span>HTTP</span>
+                            <span>ThingSpeak</span>
+                            <span>Blynk</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="project-link" href="https://github.com/Armoumad/Workshop-IoT-Node-RED-avec-ESP32-MQTT-HTTP-ThingSpeak-et-Blynk" target="_blank" rel="noreferrer">
+                                <i class="fa-brands fa-github"></i>
+                                View Repository
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card reveal">
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fa-solid fa-person-cane"></i> Assistive Tech Concept</span>
                         </div>
                         <h3>Smart Cane for the Visually Impaired</h3>
                         <p>
-                            Designed an intelligent assistive cane to improve urban mobility through obstacle detection, localization, and audio interaction.
+                            Assistive mobility concept focused on obstacle detection, localization, and audio interaction, representing the kind of human-centered robotics problems I explore beyond coursework.
                         </p>
                         <div class="tag-list">
                             <span>Raspberry Pi</span>
@@ -1452,88 +1611,6 @@
                             <span>Ultrasonic Sensors</span>
                             <span>Camera</span>
                             <span>TTS</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-paw"></i> Competition Robot</span>
-                        </div>
-                        <h3>Quadruped Robot for Maze Navigation</h3>
-                        <p>
-                            Rapidly developed a 4-legged wooden robot within 24 hours for navigation and rescue-oriented competition scenarios.
-                        </p>
-                        <div class="tag-list">
-                            <span>Rapid Prototyping</span>
-                            <span>Robot Mechanics</span>
-                            <span>Competition Engineering</span>
-                            <span>Team Build</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-recycle"></i> AI Rover</span>
-                        </div>
-                        <h3>Autonomous Waste Collector Robot</h3>
-                        <p>
-                            Created a rover concept able to detect and collect waste using computer vision and a robotic arm for semi-structured environments.
-                        </p>
-                        <div class="tag-list">
-                            <span>Raspberry Pi</span>
-                            <span>Camera</span>
-                            <span>Robotic Arm</span>
-                            <span>AI Vision</span>
-                            <span>Mobile Robotics</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-solar-panel"></i> Smart Energy</span>
-                        </div>
-                        <h3>Dual-Axis Smart Solar Panel</h3>
-                        <p>
-                            Designed an automatic solar tracking mechanism that continuously adjusts panel orientation to maximize energy capture.
-                        </p>
-                        <div class="tag-list">
-                            <span>LDR Sensors</span>
-                            <span>Servo Motors</span>
-                            <span>Embedded Control</span>
-                            <span>Energy Optimization</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-cloud-rain"></i> Sustainable Systems</span>
-                        </div>
-                        <h3>Smart Humidity Collection Kiosk</h3>
-                        <p>
-                            Proposed an autonomous kiosk capable of converting air humidity into potable water through controlled condensation and smart monitoring.
-                        </p>
-                        <div class="tag-list">
-                            <span>Environmental Engineering</span>
-                            <span>Autonomous Kiosk</span>
-                            <span>Water Systems</span>
-                            <span>Sustainability</span>
-                        </div>
-                    </article>
-
-                    <article class="project-card reveal">
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fa-solid fa-road"></i> Smart City</span>
-                        </div>
-                        <h3>SmartSweep Autonomous Night Street Cleaner</h3>
-                        <p>
-                            Designed an advanced autonomous street-cleaning concept for night operations using sensing, localization, and AI-assisted perception.
-                        </p>
-                        <div class="tag-list">
-                            <span>LiDAR</span>
-                            <span>Infrared Cameras</span>
-                            <span>GPS</span>
-                            <span>AI Perception</span>
-                            <span>Autonomous Mobility</span>
                         </div>
                     </article>
                 </div>
@@ -1604,17 +1681,19 @@
                     <span class="eyebrow"><i class="fa-solid fa-people-group"></i> Robotics Club &amp; Leadership</span>
                     <h2>Leading multidisciplinary teams around robotics, events, and technical execution.</h2>
                     <p>
-                        Beyond technical delivery, I have taken responsibility for planning, coordination, and team management through robotics club activities and national competition participation.
+                        LinkedIn currently reflects a project and media management role at FSDM Robotics Club, where I combine technical coordination with communication, event delivery, and community-building.
                     </p>
                 </div>
 
                 <div class="leadership-grid">
                     <article class="leadership-card reveal">
-                        <h3>Project Manager, Robotics Club FSDM - Fes</h3>
+                        <h3>Project Manager and Media Manager, FSDM Robotics Club</h3>
+                        <p style="color: var(--muted-dark); font-weight: 700;">Dec 2024 - Mar 2026 | Fes-Meknes, Morocco | Hybrid</p>
                         <ul class="bullet-list" style="margin-top: 1rem;">
                             <li>Managed multiple technical and event-based initiatives simultaneously within the club.</li>
                             <li>Coordinated cross-functional teams across technical, communication, and logistics areas.</li>
                             <li>Tracked milestones, allocated resources, and maintained execution discipline across projects.</li>
+                            <li>Supported club visibility through website, media coordination, and communication deliverables.</li>
                             <li>Led strategic participation in robotics competitions while balancing technical, human, and logistical requirements.</li>
                             <li>Coordinated major events including Final-Year Project Day and the Scientific Heritage Festival.</li>
                             <li>Currently involved in organizing innovation and robotics workshops for the student community.</li>
@@ -1665,32 +1744,32 @@
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-chart-line"></i>
                         <h3>Python for Data Science, AI &amp; Development</h3>
-                        <p>Coursera</p>
+                        <p>Coursera | Credential earned in 2025</p>
                     </article>
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-brain"></i>
                         <h3>Supervised Machine Learning: Regression and Classification</h3>
-                        <p>Coursera</p>
+                        <p>Coursera | Credential earned in 2025</p>
                     </article>
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-robot"></i>
                         <h3>Modern Robotics, Course 1: Foundations of Robot Motion</h3>
-                        <p>Robotics fundamentals and motion concepts</p>
+                        <p>Northwestern University | Issued Aug 2025</p>
                     </article>
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-cube"></i>
                         <h3>CATIA V5 Beginner to Advanced</h3>
-                        <p>Automotive and industrial design pathway</p>
+                        <p>Udemy | Issued Sep 2025</p>
                     </article>
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-compass-drafting"></i>
                         <h3>SOLIDWORKS Foundations</h3>
-                        <p>Sketching and extrusion workflow fundamentals</p>
+                        <p>Dassault Systemes | Issued Sep 2025</p>
                     </article>
                     <article class="cert-card reveal">
                         <i class="fa-solid fa-microchip"></i>
                         <h3>Complete PCB Design: From an Idea to a Product</h3>
-                        <p>Electronics design workflow and implementation</p>
+                        <p>Udemy | Issued Sep 2025</p>
                     </article>
                 </div>
             </div>
@@ -1700,9 +1779,9 @@
             <div class="container">
                 <div class="section-head reveal">
                     <span class="eyebrow"><i class="fa-solid fa-paper-plane"></i> Contact</span>
-                    <h2>Open to engineering opportunities, collaboration, and ambitious R&amp;D work.</h2>
+                    <h2>Open to internships, junior engineering roles, collaboration, and ambitious R&amp;D work.</h2>
                     <p>
-                        If you are working on industrial innovation, robotics, automation, or intelligent systems, I would be glad to connect and discuss how I can contribute.
+                        If you are hiring for industrial innovation, robotics, automation, IoT, or intelligent systems, I would be glad to connect and discuss how I can contribute.
                     </p>
                 </div>
 
@@ -1710,7 +1789,7 @@
                     <article class="contact-card reveal">
                         <h3>Let's build smarter systems.</h3>
                         <p>
-                            Reach out for internships, junior engineering opportunities, project collaboration, or technical discussions around robotics, AIoT, embedded systems, and smart manufacturing.
+                            Reach out for 6-month internships, junior engineering opportunities, project collaboration, or technical discussions around robotics, AIoT, embedded systems, and smart manufacturing.
                         </p>
                         <div class="contact-links">
                             <a class="contact-link" href="mailto:abdelghafourmoumad@gmail.com">
@@ -1724,6 +1803,10 @@
                             <a class="contact-link" href="https://github.com/Armoumad" target="_blank" rel="noreferrer">
                                 <i class="fa-brands fa-github"></i>
                                 GitHub
+                            </a>
+                            <a class="contact-link" href="https://armoumad.github.io/abdelghafour-moumad.github.io/portfolio.html" target="_blank" rel="noreferrer">
+                                <i class="fa-solid fa-globe"></i>
+                                Portfolio
                             </a>
                             <a class="contact-link" href="CV%20(4)_3.pdf" download>
                                 <i class="fa-solid fa-file-arrow-down"></i>
@@ -1746,6 +1829,14 @@
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
                                 <span>Morocco</span>
+                            </div>
+                            <div>
+                                <i class="fa-brands fa-github"></i>
+                                <span>github.com/Armoumad</span>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-globe"></i>
+                                <span>armoumad.github.io/abdelghafour-moumad.github.io/portfolio.html</span>
                             </div>
                             <div>
                                 <i class="fa-solid fa-language"></i>
